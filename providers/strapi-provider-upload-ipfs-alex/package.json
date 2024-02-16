@@ -4,7 +4,7 @@
     "description": "IPFS provider for strapi upload",
     "license": "MIT",
     "type": "commonjs",
-    "main": "./lib/index.js",
+    "main": "index.js",
     "directories": {
       "lib": "./lib"
     },

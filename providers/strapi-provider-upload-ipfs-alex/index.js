@@ -1,15 +1,17 @@
 let client;
 module.exports = {
-  init(config) {
+  init: (providerOptions = {}) => {
     import('kubo-rpc-client').then(({ create }) => {
       client = create({
         host: "127.0.0.1",
         port: 5001,
       });
+      console.log(client);
     });
     return {
       async uploadStream(file) {
         try {
+          console.log(client);
           const name = file.name
           const data = file.stream
           await client.files.write(
